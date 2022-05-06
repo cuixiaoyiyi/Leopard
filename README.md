@@ -17,7 +17,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 |governator|1.17.12|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/governator-1.17.12)|
 |hivemq-ce|2021.3|[Go](https://github.com/hivemq/hivemq-community-edition/releases/download/2021.3/hivemq-ce-2021.3.zip)|
 |jetty-distribution|9.4.46.v20220331|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/jetty-distribution-9.4.46.v20220331)|
-|Junit5|-|https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/Junit5|
+|Junit5|-|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/Junit5)|
 |quarkus-cli|2.8.0.Final|[Go](https://github.com/quarkusio/quarkus/releases/download/2.8.0.Final/quarkus-cli-2.8.0.Final.zip)|
 |SpringFramework|5.3.18|[Go](https://mvnrepository.com/artifact/org.springframework/spring/5.3.18)|
 |wildfly|26.1.0.Beta1|[Go](https://github.com/wildfly/wildfly/releases/download/26.1.0.Final/wildfly-26.1.0.Final.zip)|
