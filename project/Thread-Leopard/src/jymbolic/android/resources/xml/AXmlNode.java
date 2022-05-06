@@ -6,11 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Represents a node of an Android XML document.
- * 
- * @author Stefan Haas, Mario Schlipf
- */
+
 public class AXmlNode extends AXmlElement {
 	/**
 	 * The node's tag.
