@@ -1,10 +1,6 @@
 package jymbolic.android.resources.xml;
 
-/**
- * Represents a namesapce in an Android XML document.
- * 
- * @author Steven Arzt
- */
+
 public class AXmlNamespace {
 	
 	protected String prefix;
