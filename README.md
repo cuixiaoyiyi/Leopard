@@ -24,7 +24,9 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 
 ### Android Apps
 download date : 2021-09-21 from F-Droid
-```
+<details>
+<summary>APKs (Click for unfold)</summary>
+<pre><code>
 app.fedilab.fedilabtube.apk
 app.fedilab.lite.apk
 app.fedilab.mobilizon.apk
@@ -172,7 +174,9 @@ top.donmor.tiddloid.apk
 vocabletrainer.heinecke.aron.vocabletrainer.apk
 xyz.myachin.downloader.apk
 xyz.myachin.saveto.apk
-```
+</code></pre>
+</details>
+
 ## Result
 
 ### Java Programs
