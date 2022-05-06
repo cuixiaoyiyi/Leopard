@@ -9,11 +9,6 @@ import jymbolic.android.resources.xml.AXmlDocument;
 import jymbolic.android.resources.xml.AXmlNode;
 import jymbolic.android.resources.xml.IBinaryXMLFileParser;
 
-/**
- * Abstract base class for all binary XML file parsers
- * 
- * @author Steven Arzt
- */
 public abstract class AbstractBinaryXMLFileParser implements IBinaryXMLFileParser {
 
 	/**
