@@ -19,11 +19,6 @@ import soot.SootField;
 import soot.tagkit.IntegerConstantValueTag;
 import soot.tagkit.Tag;
 
-/**
- * {@link AXmlHandler} provides functionality to parse a byte compressed android xml file and access all nodes.
- * 
- * @author Stefan Haas, Mario Schlipf
- */
 public class AXmlHandler {
 	public static final String ANDROID_NAMESPACE = "http://schemas.android.com/apk/res/android";
 
