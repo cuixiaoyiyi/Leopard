@@ -1,11 +1,6 @@
 package jymbolic.android.resources.xml;
 
-/**
- * A complex value from an Android binary XML file
- * 
- * @author Steven Arzt
- *
- */
+
 public class AXmlComplexValue {
 
 	public enum Unit {
