@@ -20,11 +20,6 @@ import soot.SootField;
 import soot.tagkit.IntegerConstantValueTag;
 import soot.tagkit.Tag;
 
-/**
- * Class for parsing Android binary XML files using the AXMLPrinter2 library
- * 
- * @author Steven Arzt
- */
 public class AXML20Parser extends AbstractBinaryXMLFileParser {
 
 	private final Map<Integer, String> idToNameMap = new HashMap<Integer, String>();
