@@ -139,14 +139,12 @@ public class DestructibleIdentify {
 		return tags;
 	}
 	
-	public static final String Android_Platforms = "/HostServer/home/cuibaoquan/android-platforms";
+	public static final String Android_Platforms = "/HostServer/home/**/android-platforms";
 
 	public static void main(String[] args) {
 		String bench = args[0];
-//		String path = "G:\\code\\SpringFramework";
-//		String path = "/HostServer/home/hongwj/scripts/fdroid/2021/" + bench;
 		
-		String path = "/HostServer/home/cuibaoquan/AsyncCompoment/ThreadBenchmark/" + bench;
+		String path = "/HostServer/home/**/ThreadBenchmark/" + bench;
 
 		List<String> jars = new ArrayList<String>();
 		jars.add(path);
