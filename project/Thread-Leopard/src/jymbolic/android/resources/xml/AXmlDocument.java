@@ -4,11 +4,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Class representing a document in the Android XML format
- * 
- * @author Steven Arzt
- */
 public class AXmlDocument {
 	
 	/**
