@@ -176,7 +176,7 @@ xyz.myachin.saveto.apk
 ## Result
 
 ### Java Programs
-|Program|HTR|INR|NTT|Time(s)|
+|Program|HTR|INR|NTT|Time(ms)|
 |-|-|-|-|-|
 |jetty-distribution-9.4.46.v20220331|3|3|1|41068|
 |Junit5|0|1|0|9861|
@@ -189,7 +189,7 @@ xyz.myachin.saveto.apk
 |micronaut-cli-3.4.2|5|5|2|156813|
 
 ### Android App
-|App|HTR|INR|NTT|Time(s)|
+|App|HTR|INR|NTT|Time(ms)|
 |-|-|-|-|-|
 |net.sourceforge.opencamera|2|1|2|10272|
 |com.github.axet.torrentclient|0|1|0|10101|
