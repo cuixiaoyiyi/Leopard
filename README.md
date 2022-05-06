@@ -25,7 +25,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 ### Android Apps
 download date : 2021-09-21 from F-Droid
 <details>
-<summary>APKs (Click for unfold)</summary>
+<summary>APKs (Click for unfolding)</summary>
 <pre><code>
 app.fedilab.fedilabtube.apk
 app.fedilab.lite.apk
