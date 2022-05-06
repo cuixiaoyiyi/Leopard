@@ -3,11 +3,7 @@ package jymbolic.android.resources.xml;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Common interface for all methods capable of parsing binary Android XML files
- * 
- * @author Steven Arzt
- */
+
 public interface IBinaryXMLFileParser {
 
 	/**
