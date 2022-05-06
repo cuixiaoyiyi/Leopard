@@ -21,17 +21,6 @@ import jymbolic.android.resources.xml.AXmlNode;
 import jymbolic.android.resources.xml.parser.AXmlHandler;
 import pxb.android.axml.NodeVisitor;
 
-/**
- * This class provides easy access to all data of an AppManifest.<br />
- * Nodes and attributes of a parsed manifest can be changed. A new byte
- * compressed manifest considering the changes can be generated.
- *
- * @author Steven Arzt
- * @author Stefan Haas, Mario Schlipf
- * @see <a href=
- *      "http://developer.android.com/guide/topics/manifest/manifest-intro.html">App
- *      Manifest</a>
- */
 public class ProcessManifest implements Closeable {
 
 	/**
