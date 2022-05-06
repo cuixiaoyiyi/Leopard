@@ -25,12 +25,7 @@ import soot.Transform;
 import soot.util.HashMultiMap;
 import soot.util.MultiMap;
 
-/**
- * Parser for analyzing the layout XML files inside an android application
- * 
- * @author Steven Arzt
- *
- */
+
 public class LayoutFileParser extends AbstractResourceParser {
 
 	private final MultiMap<String, AndroidLayoutControl> userControls = new HashMultiMap<>();
