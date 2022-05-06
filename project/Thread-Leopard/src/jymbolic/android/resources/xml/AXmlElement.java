@@ -1,11 +1,6 @@
 package jymbolic.android.resources.xml;
 
-/**
- * Basic class for all classes which represent elements from an <i>Android XML file</i>.
- * Provides functionality to either include or exclude the element from the XML.
- * 
- * @author Stefan Haas, Mario Schlipf
- */
+
 public abstract class AXmlElement {
 	/**
 	 * The include flag determines whether this element will be written out in the document.
