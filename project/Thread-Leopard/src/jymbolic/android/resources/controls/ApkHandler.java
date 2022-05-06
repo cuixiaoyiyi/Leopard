@@ -20,11 +20,6 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.io.Files;
 
-/**
- * Provides access to the files within an APK and can add and replace files.
- * 
- * @author Stefan Haas, Mario Schlipf
- */
 public class ApkHandler {
 
 	private final Logger logger = LoggerFactory.getLogger(getClass());
