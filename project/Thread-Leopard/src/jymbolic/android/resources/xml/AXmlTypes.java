@@ -1,11 +1,5 @@
 package jymbolic.android.resources.xml;
 
-/**
- * Class containing type constants for Android XML files
- * 
- * @author Steven Arzt
- *
- */
 public class AXmlTypes {
 
 	public static final int TYPE_INT_BOOLEAN = 0x00000012;
