@@ -8,12 +8,6 @@ import jymbolic.android.resources.xml.AXmlNode;
 import soot.Scene;
 import soot.SootClass;
 
-/**
- * Factory class for creating Android layout controls
- * 
- * @author Steven Arzt
- *
- */
 public class LayoutControlFactory {
 
 	private boolean loadAdditionalAttributes = false;
