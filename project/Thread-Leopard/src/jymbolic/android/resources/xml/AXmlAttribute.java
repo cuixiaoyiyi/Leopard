@@ -2,15 +2,7 @@ package jymbolic.android.resources.xml;
 
 import pxb.android.axml.AxmlVisitor;
 
-/**
- * Represents an attribute of an Android XML node.
- * 
- * @param <T>
- *            determines the attribute's type. Currently {@link Integer},
- *            {@link Boolean} and {@link String} are supported.
- * @author Stefan Haas, Mario Schlipf
- * @author Steven Arzt
- */
+
 public class AXmlAttribute<T> extends AXmlElement {
 
 	/**
