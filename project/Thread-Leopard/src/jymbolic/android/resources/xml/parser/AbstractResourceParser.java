@@ -1,13 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2012 Secure Software Engineering Group at EC SPRIDE.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser Public License v2.1
- * which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * 
- * Contributors: Christian Fritz, Steven Arzt, Siegfried Rasthofer, Eric
- * Bodden, and others.
- ******************************************************************************/
 package jymbolic.android.resources.xml.parser;
 
 import java.io.File;
@@ -20,11 +10,6 @@ import java.util.zip.ZipFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Common base class for all resource parser classes
- * 
- * @author Steven Arzt
- */
 public abstract class AbstractResourceParser {
 
 	protected final Logger logger = LoggerFactory.getLogger(getClass());
