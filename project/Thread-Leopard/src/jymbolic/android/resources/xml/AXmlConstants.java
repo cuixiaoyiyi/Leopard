@@ -1,11 +1,6 @@
 package jymbolic.android.resources.xml;
 
-/**
- * Class that contains constant definitions from the Android SDK
- * 
- * @author Steven Arzt
- *
- */
+
 public class AXmlConstants {
 
 	public static final int TYPE_NULL = 0x00;
