@@ -46,8 +46,6 @@ public class LeopardMain {
 	private static boolean isApk = false;
 	private static List<String> jars = new ArrayList<String>();
 
-//	public static final String apkBasePath = "/HostServer/home/**/hongwj/scripts/fdroid/2021";
-
 	public static boolean isApk() {
 		return isApk; 
 	}
@@ -55,8 +53,7 @@ public class LeopardMain {
 	public static void main(String[] args) {
 
 		sootStartTime = System.currentTimeMillis();
-//		inputPath = args[0];
-		inputPath = "G:\\code\\ThreadBenchmark\\apache-tomcat-10.0.20";
+		inputPath = args[0];
 		Log.i(inputPath);
 		if (inputPath.toLowerCase().endsWith(".apk")) {
 			isApk = true;
@@ -182,7 +179,6 @@ public class LeopardMain {
 	}
 	private static void detectAPK(Set<String> iNRClasses, Set<SootClass> activityClasses) {
 		ExecutorService sEXECUTOR = Executors.newFixedThreadPool(40);
-		Log.i("----------detector.detectAsyncTask() starts ");
 		Log.e("activityClasses.size()=", activityClasses.size());
 		for (final SootClass currentClass : activityClasses) {
 //			if(!"eu.siacs.conversations.ui.ScanActivity".equals(currentClass.getName())) {
