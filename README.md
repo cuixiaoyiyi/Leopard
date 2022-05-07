@@ -509,3 +509,90 @@ xyz.myachin.saveto.apk
 |mobi.omegacentauri.SendReduced|0|0|0|1800018|
 |com.machiav3lli.backup|0|0|0|1800017|
 
+### Case Study
+package namlit.siteswapgenerator;
+```
+public class MainActivity extends AppCompatActivity implements AddFilterDialog.FilterDialogListener, LoadGenerationParametersDialog.UpdateGenerationParameters {
+    public boolean onOptionsItemSelected(MenuItem paramMenuItem) {
+        int i = paramMenuItem.getItemId();
+        if (i == 2131296281) {
+          loadGenerationParameters();
+        } else if (i == 2131296290) {
+          saveGenerationParameters();
+        } else if (i == 2131296273) {
+          deleteGenerationParameters();
+        } else if (i == 2131296287) {
+          showNamedSiteswaps();
+        } else if (i == 2131296275) {
+          exportAppDatabase();
+        } else if (i == 2131296280) {
+          importAppDatabase();
+        } else if (i == 2131296276) {
+          favorites();
+        } else if (i == 2131296262) {
+          showAboutDialog();
+        } else if (i == 2131296278) {
+          AlertDialog.Builder builder = new AlertDialog.Builder((Context)this);
+          builder.setMessage((CharSequence)Html.fromHtml(getString(2131689588))).setNeutralButton(getString(2131689521), null);
+          builder.create().show();
+        } 
+        return super.onOptionsItemSelected(paramMenuItem);
+  }
+  
+    public void saveGenerationParameters() {
+        GenerationParameterEntity generationParameterEntity = new GenerationParameterEntity();
+        if (!updateFromTextEdits())
+          return; 
+        generationParameterEntity.setNumberOfObjects(this.mNumberOfObjects);
+        generationParameterEntity.setPeriodLength(this.mPeriodLength);
+        generationParameterEntity.setMaxThrow(this.mMaxThrow);
+        generationParameterEntity.setMinThrow(this.mMinThrow);
+        generationParameterEntity.setNumberOfJugglers(this.mNumberOfJugglers);
+        generationParameterEntity.setMaxResults(this.mMaxResults);
+        generationParameterEntity.setTimeout(this.mTimeout);
+        generationParameterEntity.setSynchronous(this.mIsSyncPattern);
+        generationParameterEntity.setRandomMode(this.mIsRandomGenerationMode);
+        generationParameterEntity.setZips(this.mIsZips);
+        generationParameterEntity.setZaps(this.mIsZaps);
+        generationParameterEntity.setHolds(this.mIsHolds);
+        generationParameterEntity.setFilterList(this.mFilterList);
+        (new SaveGenerationParametersDialog()).show(getSupportFragmentManager(), getString(2131689706), generationParameterEntity);
+  }
+}
+```
+package namlit.siteswapgenerator;
+```
+public class SaveGenerationParametersDialog extends DialogFragment {
+    public Dialog onCreateDialog(Bundle paramBundle) {
+        if (paramBundle != null)
+          this.mGenerationParameterEntity = (GenerationParameterEntity)paramBundle.getSerializable("STATE_GENERATION_PARAMETER_ENTITY"); 
+        AlertDialog.Builder builder = new AlertDialog.Builder((Context)getActivity());
+        builder.setView(2131492917).setTitle(getString(2131689707)).setNegativeButton(getString(2131689523), new DialogInterface.OnClickListener() {
+              public void onClick(DialogInterface param1DialogInterface, int param1Int) {}
+            }).setPositiveButton(getString(2131689676), null);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+              public void onShow(final DialogInterface dialog) {
+                ((AlertDialog)dialog).getButton(-1).setOnClickListener(new View.OnClickListener() {
+                      public void onClick(View param2View) {
+                        SaveGenerationParametersDialog.this.mGenerationParameterEntity.setName(SaveGenerationParametersDialog.this.mGenerationParameterNameTextEdit.getText().toString());
+                        SaveGenerationParametersDialog.this.insertEntityInDatabase();
+                        dialog.dismiss();
+                      }
+                    });
+              }
+            });
+        return (Dialog)alertDialog;
+  }
+  
+    public void insertEntityInDatabase() {
+        (new Thread(new Runnable() {
+              public void run() {
+                try {
+                  AppDatabase.getAppDatabase(SaveGenerationParametersDialog.this.getContext()).generationParameterDao().insertGenerationParameters(new GenerationParameterEntity[] { SaveGenerationParametersDialog.access$100(this.this$0) });
+                } catch (SQLiteConstraintException sQLiteConstraintException) {}
+              }
+            })).start();
+  }
+}
+```
