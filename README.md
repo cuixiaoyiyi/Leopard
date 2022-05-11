@@ -182,15 +182,17 @@ xyz.myachin.saveto.apk
 ### Java Programs
 |Program|HTR|INR|NTT|Time(ms)|
 |-|-|-|-|-|
-|jetty-distribution-9.4.46.v20220331|3|3|1|41068|
+|jetty-distribution-9.4.46.v20220331|3|1|3|41068|
 |Junit5|0|1|0|9861|
-|hivemq-ce-2021.3|1|1|2|357475|
-|wildfly-26.1.0.Beta1|9|9|7|494505|
-|SpringFramework5.3.18|3|3|6|176994|
-|quarkus-cli-2.8.0.Final|1|1|5|72502|
-|apache-cxf-3.5.2|7|7|19|430753|
-|apache-tomcat-10.0.20|1|1|2|51953|
-|micronaut-cli-3.4.2|5|5|2|156813|
+|hivemq-ce-2021.3|1|2|1|357475|
+|wildfly-26.1.0.Beta1|9|7|9|494505|
+|SpringFramework5.3.18|3|6|3|176994|
+|quarkus-cli-2.8.0.Final|1|5|1|72502|
+|apache-cxf-3.5.2|7|19|7|430753|
+|apache-tomcat-10.0.20|1|2|1|51953|
+|micronaut-cli-3.4.2|5|2|5|156813|
+|sum|30|45|30|average(199102)|
+
 
 ### Android App
 
