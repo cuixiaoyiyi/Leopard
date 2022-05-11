@@ -344,6 +344,7 @@ xyz.myachin.saveto.apk
 |io.github.silinote|1|0|1|11994|
 |com.shatteredpixel.shatteredpixeldungeon|0|0|0|7596|
 |com.zoffcc.applications.trifa|14|24|14|25906|
+|Sum|305|128|303|max(188318),average(19169)|
 
 #### eAsyncChecker (Timeout: 5min)
 |App|HTR|INR|NTT|Time(ms)|
