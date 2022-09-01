@@ -14,7 +14,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 |-|-|-|
 |apache-cxf|3.5.2|[Go](https://repo1.maven.org/maven2/org/apache/cxf/cxf-core/3.5.2/)|
 |apache-tomcat|10.0.20|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/apache-tomcat-10.0.20)|
-|governator|1.17.12|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/governator-1.17.12)|
+|micronaut-cli|3.4.2|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/micronaut-cli-3.4.2)|
 |hivemq-ce|2021.3|[Go](https://github.com/hivemq/hivemq-community-edition/releases/download/2021.3/hivemq-ce-2021.3.zip)|
 |jetty-distribution|9.4.46.v20220331|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/jetty-distribution-9.4.46.v20220331)|
 |Junit5|-|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/Junit5)|
@@ -179,19 +179,33 @@ xyz.myachin.saveto.apk
 
 ## Result
 
-### Java Programs
-|Program|HTR|INR|NTT|Time(ms)|
+### Java Programs (without FP refinement)
+|Program|HTR|INR|NTT|
+|-|-|-|-|
+|apache-cxf-3.5.2|7|19|7|
+|apache-tomcat-10.0.20|1|2|1|
+|hivemq-ce-2021.3|1|2|1|
+|jetty-distribution-9.4.46.v20220331|3|1|3|
+|Junit5|0|1|0|
+|micronaut-cli-3.4.2|5|2|5|
+|quarkus-cli-2.8.0.Final|3|5|3|
+|SpringFramework5.3.18|3|6|3|
+|wildfly-26.1.0.Beta1|10|19|10|
+|sum|33|57|33|
+
+### Java Programs (with FP refinement)
+|Program|HTR|INR|NTT|Time(s)|
 |-|-|-|-|-|
-|jetty-distribution-9.4.46.v20220331|3|1|3|41068|
-|Junit5|0|1|0|9861|
-|hivemq-ce-2021.3|1|2|1|357475|
-|wildfly-26.1.0.Beta1|9|7|9|494505|
-|SpringFramework5.3.18|3|6|3|176994|
-|quarkus-cli-2.8.0.Final|1|5|1|72502|
-|apache-cxf-3.5.2|7|19|7|430753|
-|apache-tomcat-10.0.20|1|2|1|51953|
-|micronaut-cli-3.4.2|5|2|5|156813|
-|sum|30|45|30|average(199102)|
+|apache-cxf-3.5.2|7|19|7|695|
+|apache-tomcat-10.0.20|1|2|1|73|
+|hivemq-ce-2021.3|1|2|1|556|
+|jetty-distribution-9.4.46.v20220331|3|1|3|71|
+|Junit5|0|1|0|15|
+|micronaut-cli-3.4.2|5|3|5|285|
+|quarkus-cli-2.8.0.Final|3|5|3|203|
+|SpringFramework5.3.18|2|6|2|256|
+|wildfly-26.1.0.Beta1|8|9|8|1035|
+|sum|30|48|30|3193(319 on average)|
 
 
 ### Android App
