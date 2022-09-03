@@ -12,18 +12,18 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 ###  Java Programs
 |project|version|link|
 |-|-|-|
-|apache-cxf|3.5.2|[Go](https://repo1.maven.org/maven2/org/apache/cxf/cxf-core/3.5.2/)|
+|apache-cxf|3.5.2|[Go](./Benchmark/JavaPrograms/apache-cxf-3.5.2)|
 |apache-tomcat|10.0.20|[Go](./Benchmark/JavaPrograms/apache-tomcat-10.0.20)|
-|micronaut-cli|3.4.2|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/micronaut-cli-3.4.2)|
-|hivemq-ce|2021.3|[Go](https://github.com/hivemq/hivemq-community-edition/releases/download/2021.3/hivemq-ce-2021.3.zip)|
-|jetty-distribution|9.4.46.v20220331|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/jetty-distribution-9.4.46.v20220331)|
-|Junit5|-|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/Junit5)|
-|quarkus-cli|2.8.0.Final|[Go](https://github.com/quarkusio/quarkus/releases/download/2.8.0.Final/quarkus-cli-2.8.0.Final.zip)|
-|SpringFramework|5.3.18|[Go](https://mvnrepository.com/artifact/org.springframework/spring/5.3.18)|
-|wildfly|26.1.0.Beta1|[Go](https://github.com/wildfly/wildfly/releases/download/26.1.0.Final/wildfly-26.1.0.Final.zip)|
+|micronaut-cli|3.4.2|[Go](./Benchmark/JavaPrograms/micronaut-cli-3.4.2)|
+|hivemq-ce|2021.3|[Go](./Benchmark/JavaPrograms/hivemq-ce-2021.3)|
+|jetty-distribution|9.4.46.v20220331|[Go](./Benchmark/JavaPrograms/jetty-distribution-9.4.46.v20220331)|
+|Junit5|-|[Go](./Benchmark/JavaPrograms/Junit5)|
+|quarkus-cli|2.8.0.Final|[Go](./Benchmark/JavaPrograms/quarkus-cli-2.8.0.Final)|
+|SpringFramework|5.3.18|[Go](./Benchmark/JavaPrograms/5.3.18)|
+|wildfly|26.1.0.Beta1|[Go](./Benchmark/JavaPrograms/wildfly-26.1.0.Beta1)|
 
 ### Android Apps
-download date : 2021-09-21 from F-Droid [GO]()
+download date : 2021-09-21 from F-Droid [GO](./Benchmark/Apks)
 
 ## Result
 
