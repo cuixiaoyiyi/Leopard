@@ -19,17 +19,12 @@ import soot.Scene;
 import soot.SootClass;
 import soot.SootMethod;
 import soot.Transform;
-import soot.Unit;
-import soot.jimple.InvokeExpr;
-import soot.jimple.Stmt;
 import soot.options.Options;
-import soot.util.Chain;
 import ac.checker.NTTChecker;
 import ac.checker.PointCollector;
 import ac.checker.HTRChecker;
 import ac.checker.INRChecker;
 import ac.checker.PointCollector.InitialPoint;
-import ac.constant.Signature;
 import ac.entrypoint.activity.ActivityEntryPointWithoutFragment;
 import ac.record.ThreadErrorRecord;
 import ac.util.AsyncInherit;
@@ -38,43 +33,62 @@ import ac.util.Log;
 
 public class LeopardMain {
 
-	public static final String Android_Platforms = "/HostServer/home/**/android-platforms";
+	public static String Android_Platforms = "./android-platforms/";
 
 	
-	public static final String Output = "." + File.separator + "FDroid147_0901_with" + File.separator;
+	public static String Output = "./output/";
 	public static String inputPath = null;
-//	public static final String Android_Platforms = "/HostServer/home/**/android-platforms";
 
 	public static long sootStartTime = 0;
 
 	public static long preprocessStartTime = 0;
 	
-	public static final boolean refinement = false;
+	public static boolean refinement = false;
 
 	private static boolean isApk = false;
 	private static List<String> jars = new ArrayList<String>();
-
-	public static final String apkBasePath = "/HostServer/home/**/scripts/fdroid/2021";
 
 	public static boolean isApk() {
 		return isApk;
 	}
 
+	/**
+	 * 
+	 * @param args
+	 * 
+	 * args[0] input path:
+	 * 		apk: {path}/name.apk   
+	 * 		jar: 	{path}/name.jar  or 	{path}/   (all jars in the dictionary will be detected) 
+	 * args[1]  output path
+	 * args[2]  refinement
+	 * 		withRefinement:     1
+	 * 		withoutRefinement:  0
+	 * args[3]  android-platforms path (if args[0] is for apk)
+	 *      {path}/android-platforms
+	 */
 	public static void main(String[] args) {
 
 		sootStartTime = System.currentTimeMillis();
-		inputPath = "/HostServer/home/**/AsyncCompoment/ThreadBenchmark/" + args[0];
+		inputPath = args[0];
 
 		Log.i(inputPath);
 		if (args[0].toLowerCase().endsWith(".apk")) {
 			isApk = true;
-			inputPath = apkBasePath + File.separator + args[0];
 			jars.add(inputPath);
 		} else if (inputPath.toLowerCase().endsWith(".jar")) {
 			jars.add(inputPath);
 		} else {
 			jars.addAll(getJars(inputPath));
 		}
+		
+		Output = args[1];
+		
+		refinement = "1".equals(args[2]);
+		
+		if(isApk){
+			Android_Platforms = args[3];
+		}
+		
 		Log.i("jars.size() = ", jars.size());
 		sootInitialization(jars);
 		preprocessStartTime = System.currentTimeMillis();
@@ -122,46 +136,8 @@ public class LeopardMain {
 		}
 	}
 
-	private static void detect3() {
-		Set<SootClass> sootClasses = new HashSet<SootClass>();
-		sootClasses.addAll(Scene.v().getApplicationClasses());
-		for (SootClass currentClass : sootClasses) {
-			Set<SootMethod> sootMethods = null;
-			try {
-				sootMethods = Collections.synchronizedSet(new HashSet<>());
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			if(sootMethods == null) {
-				continue;
-			}
-			sootMethods.addAll(currentClass.getMethods());
-			for (SootMethod sootMethod : sootMethods) {
-				if (sootMethod.hasActiveBody()) {
-					Body body = sootMethod.getActiveBody();
-					for (Unit unit : body.getUnits()) {
-						if (unit instanceof Stmt) {
-							Stmt stmt = (Stmt) unit;
-							if (stmt.containsInvokeExpr()) {
-								InvokeExpr invokeExpr = stmt.getInvokeExpr();
-								SootMethod invokeMethod = invokeExpr.getMethod();
-								if ((Signature.METHOD_SUBSIG_INTERRUPT.equals(invokeMethod.getSubSignature())
-										|| Signature.METHOD_SUBSIG_INTERRUPT_SAFELY
-												.equals(invokeMethod.getSubSignature()))
-										&& AsyncInherit.isInheritedFromThread(invokeMethod.getDeclaringClass())) {
-									Log.e("##", sootMethod.getSignature(), "#", invokeExpr);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
 	public static void detect() {
 		Log.i("----------detector.detectThread() starts ");
-//		detect2();
 		final Set<String> runnableClasses = new HashSet<String>();
 		Set<String> iNRClasses = new HashSet<>();
 		Set<SootClass> activityClasses = null;

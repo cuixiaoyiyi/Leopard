@@ -1,10 +1,14 @@
 # Leopard
 
-A lightweight tool to detect thread related misuses in Java.
+(This repository will be made public if the paper is accepted)
+
+
+A lightweight tool to detect thread related misuses causing resource leaks in Java.
 
 In the Java platform, it is common to use the fundamental asynchronous thread (java.lang.Thread). However, due to garbage collection and thread interruption mechanism, it can be easily misused. The recycle of an object will be blocked if an alive thread holds a strong reference to it. In addition, the careless implementation of asynchronous thread may cause that there is not responding to the interrupt mechanism. This may result the unexpected thread related behavior and resource leak/waste.
 
 we implement a lightweight tool named Leopard to detect them statically, which is a very fast one with the demand-driven slicing analysis. It reduces false negatives caused by the heavyweight time-consuming path sensitive analysis proposed by existing work.
+
 
 
 ## 1. Tools
@@ -16,7 +20,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 
 ## 2. Benchmark
 
-###  2.1 Java Programs
+###  2.1 Java Programs [Go](./Benchmark]  
 |project|version|link|
 |-|-|-|
 |apache-cxf|3.5.2|[Go](./Benchmark/JavaPrograms/apache-cxf-3.5.2)|
@@ -29,8 +33,8 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 |SpringFramework|5.3.18|[Go](./Benchmark/JavaPrograms/5.3.18)|
 |wildfly|26.1.0.Beta1|[Go](./Benchmark/JavaPrograms/wildfly-26.1.0.Beta1)|
 
-### 2.2 Android Apps
-download date : 2021-09-21 from F-Droid [GO](./Benchmark/Apks)
+### 2.2 Android Apps [GO](./Benchmark/Apks)
+download date : 2021-09-21 from F-Droid 
 
 ## 3. Experimental Result
 
