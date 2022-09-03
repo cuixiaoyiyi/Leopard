@@ -13,7 +13,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 |project|version|link|
 |-|-|-|
 |apache-cxf|3.5.2|[Go](https://repo1.maven.org/maven2/org/apache/cxf/cxf-core/3.5.2/)|
-|apache-tomcat|10.0.20|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/apache-tomcat-10.0.20)|
+|apache-tomcat|10.0.20|[Go](./Benchmark/JavaPrograms/apache-tomcat-10.0.20)|
 |micronaut-cli|3.4.2|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/micronaut-cli-3.4.2)|
 |hivemq-ce|2021.3|[Go](https://github.com/hivemq/hivemq-community-edition/releases/download/2021.3/hivemq-ce-2021.3.zip)|
 |jetty-distribution|9.4.46.v20220331|[Go](https://github.com/cuixiaoyiyi/Leopard/tree/main/Benchmark/JavaPrograms/jetty-distribution-9.4.46.v20220331)|
