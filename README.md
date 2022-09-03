@@ -20,7 +20,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 
 ## 2. Benchmark
 
-###  2.1 Java Programs [Go](./Benchmark]  
+###  2.1 Java Programs [Go](./Benchmark)  
 |project|version|link|
 |-|-|-|
 |apache-cxf|3.5.2|[Go](./Benchmark/JavaPrograms/apache-cxf-3.5.2)|
