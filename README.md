@@ -9,6 +9,28 @@ In the Java platform, it is common to use the fundamental asynchronous thread (j
 
 we implement a lightweight tool named Leopard to detect them statically, which is a very fast one with the demand-driven slicing analysis. It reduces false negatives caused by the heavyweight time-consuming path sensitive analysis proposed by existing work.
 
+## 0. FeedBack of Developers (Confirmed: 63; Fixed: 18)
+|NO.|App|Fork|Star|#Download on GooglePaly |#Misuse (*Fixed)|Confirmed Issue Id|
+|-|-|-|-|-|-|-|
+|01|VocableTrainer|10|27|-|1|[93](https://github.com/0xpr03/VocableTrainer-Android/issues/93)|
+|02|toposuite|2|12|[5,000+](https://play.google.com/store/apps/details?id=ch.hgdev.toposuite)|4|[3](https://github.com/hgdev-ch/toposuite-android/issues/3)|
+|03|APK-Explorer-Editorcite | 47 | 254 |[100+](https://play.google.com/store/apps/details?id=com.apk.explorer)  |1*|[29](https://github.com/apk-editor/APK-Explorer-Editor/issues/29) |
+|04|LRC-Editorcite | 9 | 42 |[100,000+](https://play.google.com/store/apps/details?id=com.cg.lrceditor)| 3 |[35](https://github.com/Spikatrix/LRC-Editor/issues/35) |
+|05|Nextcloudcite | 1.4K | 3K |[100,000+](https://play.google.com/store/apps/details?id=com.nextcloud.client)| 7 |[10691](https://github.com/nextcloud/android/issues/10691) |
+|06|TRIfAcite | 51 | 203 | -| 14 |[350](https://github.com/twireapp/Twire/issues/350) |
+|07|AppManagercite | 138 | 1.8K | -| 1 |[854](https://github.com/MuntashirAkon/AppManager/issues/854) |
+|08|Siteswap Generatorcite | 3 | 13 | [1,000+](https://play.google.com/store/apps/details?id=namlit.siteswapgenerator) | 9 |[55](https://github.com/namlit/siteswap_generator/issues/55) |
+|09|TC Slimcite | 58 | 978 | [10,000+](https://play.google.com/store/apps/details?id=net.kollnig.missioncontrol.play) | 2 |[36](https://github.com/TrackerControl/tracker-control-android/issues/36) |
+|10|blabber.imcite | 58 | 978 | - | 6* |[674](https://codeberg.org/kriztan/blabber.im/issues/674) |
+|11|OSMDashboardcite | 7 | 45 | [500+](https://play.google.com/store/apps/details?id=de.storchp.opentracks.osmplugin) | 1* |[169](https://github.com/OpenTracksApp/OSMDashboard/issues/169) |
+|12|Ghost Commander | - | - | [1,000,000+](https://play.google.com/store/apps/details?id=com.ghostsq.commander) | 1* |[93](https://sourceforge.net/projects/ghostcommander/issues/93) |
+|13|Offline Puzzle Solver | - | 1 | - | 1* |[1](https://gitlab.com/20kdc/offline-puzzle-solver/issues/1) |
+|14|FitoTrack | 147 | 45 | [5,000+](https://play.google.com/store/apps/details?id=de.tadris.fitness) | 3 | [400](https://codeberg.org/jannis/FitoTrack/issues/400) |
+|15|Conversations | 1.2K | 4.1K | [100,000+](https://play.google.com/store/apps/details?id=eu.siacs.conversations) | 2* | [4366](https://github.com/iNPUTmice/Conversations/issues/4366)|
+|16|monocles chat | 6 | 10 | - | 6* | [44](https://codeberg.org/Arne/monocles_chat/issues/44) |
+|17|ccgt| 3 | 8 | - | 1 | [7](https://github.com/pterodactylus42/ccgt\issues\7)  |
+|-|Total |-|-|-|63(Fixed 18)|- 
+
 
 
 ## 1. Tools
