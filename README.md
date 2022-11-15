@@ -23,7 +23,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 |09|TC Slimcite | 58 | 978 | [10,000+](https://play.google.com/store/apps/details?id=net.kollnig.missioncontrol.play) | 2 |[336](https://github.com/TrackerControl/tracker-control-android/issues/336) |
 |10|blabber.imcite | 58 | 978 | - | 6* |[674](https://codeberg.org/kriztan/blabber.im/issues/674) |
 |11|OSMDashboardcite | 7 | 45 | [500+](https://play.google.com/store/apps/details?id=de.storchp.opentracks.osmplugin) | 1* |[169](https://github.com/OpenTracksApp/OSMDashboard/issues/169) |
-|12|Ghost Commander | - | - | [1,000,000+](https://play.google.com/store/apps/details?id=com.ghostsq.commander) | 1* |[93](https://sourceforge.net/projects/ghostcommander/issues/93) |
+|12|Ghost Commander | - | - | [1,000,000+](https://play.google.com/store/apps/details?id=com.ghostsq.commander) | 1* |[93]([https://sourceforge.net/projects/ghostcommander/issues/93](https://sourceforge.net/p/ghostcommander/bugs/93/)) |
 |13|Offline Puzzle Solver | - | 1 | - | 1* |[1](https://gitlab.com/20kdc/offline-puzzle-solver/issues/1) |
 |14|FitoTrack | 147 | 45 | [5,000+](https://play.google.com/store/apps/details?id=de.tadris.fitness) | 3 | [400](https://codeberg.org/jannis/FitoTrack/issues/400) |
 |15|Conversations | 1.2K | 4.1K | [100,000+](https://play.google.com/store/apps/details?id=eu.siacs.conversations) | 2* | [4366](https://github.com/iNPUTmice/Conversations/issues/4366)|
