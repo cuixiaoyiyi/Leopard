@@ -17,7 +17,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 |03|APK-Explorer-Editorcite | 47 | 254 |[100+](https://play.google.com/store/apps/details?id=com.apk.explorer)  |1*|[29](https://github.com/apk-editor/APK-Explorer-Editor/issues/29) |
 |04|LRC-Editorcite | 9 | 42 |[100,000+](https://play.google.com/store/apps/details?id=com.cg.lrceditor)| 3 |[35](https://github.com/Spikatrix/LRC-Editor/issues/35) |
 |05|Nextcloudcite | 1.4K | 3K |[100,000+](https://play.google.com/store/apps/details?id=com.nextcloud.client)| 7 |[10691](https://github.com/nextcloud/android/issues/10691) |
-|06|TRIfAcite | 51 | 203 | -| 14 |[350](https://github.com/twireapp/Twire/issues/350) |
+|06|TRIfAcite | 51 | 203 | -| 14 |[382](https://github.com/twireapp/Twire/issues/382) |
 |07|AppManagercite | 138 | 1.8K | -| 1 |[854](https://github.com/MuntashirAkon/AppManager/issues/854) |
 |08|Siteswap Generatorcite | 3 | 13 | [1,000+](https://play.google.com/store/apps/details?id=namlit.siteswapgenerator) | 9 |[55](https://github.com/namlit/siteswap_generator/issues/55) |
 |09|TC Slimcite | 58 | 978 | [10,000+](https://play.google.com/store/apps/details?id=net.kollnig.missioncontrol.play) | 2 |[36](https://github.com/TrackerControl/tracker-control-android/issues/36) |
