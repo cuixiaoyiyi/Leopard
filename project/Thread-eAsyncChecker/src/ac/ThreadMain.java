@@ -17,8 +17,8 @@ import ac.processor.ThreadLibraryInvocationProcessor;
 import ac.processor.ThreadNewArrayExprProcessor;
 import ac.processor.ThreadNewExprProcessor;
 import ac.processor.ThreadSymbolicInstrumenter;
-import ac.processor.ThreadInterProceduralJudge;
 import ac.record.ThreadErrorRecord;
+import ac.processor.ThreadInterProceduralJudge;
 import jymbolic.TimeOutDetectionThread;
 import jymbolic.android.config.AndroidSootConfig;
 import jymbolic.android.config.AndrolicConfigurationManager;
@@ -40,7 +40,7 @@ public class ThreadMain {
 	
 	private static volatile long SOOT_START_TIME = 0;
 	
-	private static volatile long ANDROLIC_START_TIME = 0;
+	public static volatile long ANDROLIC_START_TIME = 0;
 	
 	private static volatile boolean EXIT = false;
 	

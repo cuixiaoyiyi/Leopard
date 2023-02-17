@@ -1,0 +1,10 @@
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/SpringFramework5.3.18 >SpringLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/apache-tomcat-10.0.20 >tomcatLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/quarkus-cli-2.8.0.Final >quarkusLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/wildfly-26.1.0.Beta1 >wildflyLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/hivemq-ce-2021.3 >hivemq-ceLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/jetty-distribution-9.4.46.v20220331 >jetty-distributionLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/micronaut-cli-3.4.2 >micronautLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/apache-cxf-3.5.2 >cxfLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/Junit5 >SpringLog.log 2>&1
+java -cp Leopard.jar ac.LeopardMain  ./JavaPrograms/governator-1.17.12 >governatorLog.log 2>&1

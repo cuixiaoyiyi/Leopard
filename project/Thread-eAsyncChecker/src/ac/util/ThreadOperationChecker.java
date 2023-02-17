@@ -43,6 +43,7 @@ public class ThreadOperationChecker {
 			MethodUtil.getMethod(((RefType) asyncObject.getTargetRunnableField().getType()).getSootClass(),
 					Signature.METHOD_SUBSIG_RUN);
 		}
+		ThreadErrorRecord.recordWorkingData("Event;" + doInBackgroundMethod.getSignature());
 		RunMethod summary = new RunMethod(doInBackgroundMethod);
 
 		if (!summary.isAllLoopCancelled()) {

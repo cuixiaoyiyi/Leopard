@@ -23,12 +23,14 @@ public class ThreadErrorRecord {
 
 	private static final String ERROR_FOLDER = BaseConfiguration.getErrorFolder() + File.separator;
 
-	public synchronized static void recordHTR(ThreadRefObject threadObj,
-			Map<SootField, IBasicValue> taintedField, Unit unit, GlobalMessage globalMessage) {
+	private static int misuseNum = 0;
+
+	public synchronized static void recordHTR(ThreadRefObject threadObj, Map<SootField, IBasicValue> taintedField,
+			Unit unit, GlobalMessage globalMessage) {
 		if (!needRecord(ThreadMain.HTRMap, threadObj)) {
 			return;
 		}
-		
+
 		String filePath = ERROR_FOLDER + "HTR-sum.txt";
 		recordSum(threadObj, globalMessage, filePath);
 
@@ -48,14 +50,13 @@ public class ThreadErrorRecord {
 	}
 
 	public synchronized static void recordNTT(ThreadRefObject threadObj, GlobalMessage globalMessage) {
-		if(!ThreadMain.HTRMap.containsKey(threadObj.getObjectKey())) {
+		if (!ThreadMain.HTRMap.containsKey(threadObj.getObjectKey())) {
 			return;
 		}
 		if (!needRecord(ThreadMain.NTTMap, threadObj)) {
 			return;
 		}
-	
-		
+
 		String filePath = ERROR_FOLDER + "NTT-sum.txt";
 		recordSum(threadObj, globalMessage, filePath);
 
@@ -68,7 +69,7 @@ public class ThreadErrorRecord {
 	public synchronized static void recordINR(ThreadRefObject threadObj, GlobalMessage globalMessage) {
 		if (!needRecord(ThreadMain.INRMap, threadObj))
 			return;
-		
+
 		String filePath = ERROR_FOLDER + "INR-sum.txt";
 		recordSum(threadObj, globalMessage, filePath);
 
@@ -82,31 +83,34 @@ public class ThreadErrorRecord {
 	}
 
 	/**
-	 * If processedMap doesn't contain threadObj, return true. Otherwise, return false
+	 * If processedMap doesn't contain threadObj, return true. Otherwise, return
+	 * false
+	 * 
 	 * @param processedMap
 	 * @param threadObj
 	 * @return
 	 */
-	private synchronized static boolean needRecord(Map<String, ThreadRefObject> processedMap, ThreadRefObject threadObj) {
+	private synchronized static boolean needRecord(Map<String, ThreadRefObject> processedMap,
+			ThreadRefObject threadObj) {
 		ThreadMain.rightInstanceMap.remove(threadObj.getObjectKey());
 //		if (!threadObj.isAliasedToField()) { // only record AsyncTask field
 //			return false;
 //		}
 		if (!ThreadMain.errorInstanceMap.containsKey(threadObj.getObjectKey())) {
 			ThreadMain.errorInstanceMap.put(threadObj.getObjectKey(), threadObj);
-			String errorInstanceFilePath = BaseConfiguration.getSymbolicPathFolder() + File.separator + "error-async.txt";
-			record(threadObj.getObjectKey()+"\n", errorInstanceFilePath);
+			String errorInstanceFilePath = BaseConfiguration.getSymbolicPathFolder() + File.separator
+					+ "error-async.txt";
+			record(threadObj.getObjectKey() + "\n", errorInstanceFilePath);
 		}
-		
+
 		if (!processedMap.containsKey(threadObj.getObjectKey())) {
 			processedMap.put(threadObj.getObjectKey(), threadObj);
 			return true;
-		}
-		else {
+		} else {
 			return false;
 		}
 	}
-	
+
 	private synchronized static String recordPathInfo(ThreadRefObject threadObj, GlobalMessage globalMessage) {
 		String content = "";
 		ThreadTypeState state = threadObj.getTypeState(globalMessage);
@@ -138,7 +142,7 @@ public class ThreadErrorRecord {
 		FileWriter errorWriter = null;
 		try {
 			errorWriter = new FileWriter(rightInstanceFilePath, true);
-			for (String key: ThreadMain.rightInstanceMap.keySet()) {
+			for (String key : ThreadMain.rightInstanceMap.keySet()) {
 				errorWriter.write(key + "\n");
 			}
 		} catch (Exception e) {
@@ -151,13 +155,20 @@ public class ThreadErrorRecord {
 			}
 		}
 	}
-	
-	private static void recordSum(ThreadRefObject threadObj, GlobalMessage globalMessage, String filePath) {
-		String content = threadObj.getType().toString() + ";" + globalMessage.getCurrentPathInfo().getLength() + ";" + threadObj.getInitStatement().toString() + ";"
-				+ threadObj.getObjectKey() + "\n";
+
+	private synchronized static void recordSum(ThreadRefObject threadObj, GlobalMessage globalMessage,
+			String filePath) {
+		recordWorkingData(++misuseNum);
+		String content = threadObj.getType().toString() + ";" + globalMessage.getCurrentPathInfo().getLength() + ";"
+				+ threadObj.getInitStatement().toString() + ";" + threadObj.getObjectKey() + "\n";
 		record(content, filePath);
 	}
 
+	public synchronized static void recordWorkingData(Object arg) {
+		String filePath = ERROR_FOLDER + "workingData.txt";
+		String content = (System.currentTimeMillis() - ThreadMain.ANDROLIC_START_TIME) + ";" + arg + "\n";
+		record(content, filePath);
+	}
 
 	public static void record(String content, String filePath) {
 		FileWriter errorWriter = null;

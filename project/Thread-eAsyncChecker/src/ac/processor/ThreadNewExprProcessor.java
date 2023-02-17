@@ -5,6 +5,7 @@ import soot.jimple.NewExpr;
 import ac.entity.RunnableRefObject;
 import ac.entity.ThreadRefObject;
 import ac.entity.ThreadTypeState;
+import ac.record.ThreadErrorRecord;
 import ac.util.ThreadInherit;
 import jymbolic.entity.ContextMessage;
 import jymbolic.entity.GlobalMessage;
@@ -34,6 +35,7 @@ public class ThreadNewExprProcessor implements INewExprProcessor {
 			ThreadTypeState newState = new ThreadTypeState();
 			newState.getExecutionUnitList().add(assignStmt);
 			globalMessage.getObjectToTypeState().put(theObject, newState);
+			ThreadErrorRecord.recordWorkingData("Event;" + assignStmt + ";" + assignStmt.hashCode());
 			return theObject;
 		} else if (ThreadInherit.isInheritedFromRunnable(newExpr.getBaseType())) {
 			RunnableRefObject runnableRefObject = new RunnableRefObject(assignStmt, globalMessage);

@@ -14,6 +14,7 @@ import ac.entity.RunnableRefObject;
 import ac.entity.ThreadRefObject;
 import ac.entity.ThreadStatus;
 import ac.entity.ThreadTypeState;
+import ac.record.ThreadErrorRecord;
 import ac.util.ThreadInherit;
 import ac.util.ThreadOperationChecker;
 import jymbolic.entity.ContextMessage;
@@ -64,6 +65,7 @@ public class ThreadLibraryInvocationProcessor implements ILibraryInvocationProce
 			IBasicValue threadObj = context.getLocalToObject().get(instanceInvokeExpr.getBase());
 //			String signature = instanceInvokeExpr.getMethod().getSignature();
 			if (ThreadInherit.isStartInvokeExpr(libraryInvokeExpr)) {
+				ThreadErrorRecord.recordWorkingData("Event;" + unit+";" +unit.hashCode());
 				Value value = null;
 				value = instanceInvokeExpr.getBase();
 				threadObj = context.getLocalToObject().get(value);
@@ -92,6 +94,7 @@ public class ThreadLibraryInvocationProcessor implements ILibraryInvocationProce
 				switch (subSignature) {
 				case Signature.METHOD_SUBSIG_INTERRUPT:
 				case Signature.METHOD_SUBSIG_INTERRUPT_SAFELY:
+					ThreadErrorRecord.recordWorkingData("Event;" + unit+";" +unit.hashCode());
 					this.interruptThread((ThreadRefObject) threadObj, base, unit, context, globalMessage);
 					return new BasicNumericConstant(IntConstant.v(1));
 				case Signature.METHOD_SUBSIG_IS_INTERRUPTED:
