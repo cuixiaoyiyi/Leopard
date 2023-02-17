@@ -34,7 +34,7 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 
 
 ## 1. Tools
-### 1.1 [Leopard](./project/Thread-Leopard)
+### 1.1 [Leopard](./project/Leopard)
 ### 1.2 [eAsyncChecker](./project/Thread-eAsyncChecker)
 
 [android-platforms](./project/android-platforms)(Dependencies required for soot to resolve Android)
