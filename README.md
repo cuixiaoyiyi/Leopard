@@ -1,6 +1,13 @@
 # Leopard
 
-(This repository will be made public if the paper is accepted)
+## Video on YouTube
+
+[Leopard: A Tool to Detect Misuses of Java Basic Thread](https://youtu.be/0PrRQmkLhDg)   
+
+If you can't click to jump to YouTube, pls copy the link below   
+https://youtu.be/0PrRQmkLhDg  
+
+
 
 A lightweight tool to detect thread related misuses causing resource leaks in Java.
 
@@ -8,7 +15,7 @@ In the Java platform, it is common to use the fundamental asynchronous thread (j
 
 we implement a lightweight tool named Leopard to detect them statically, which is a very fast one with the demand-driven slicing analysis. It reduces false negatives caused by the heavyweight time-consuming path sensitive analysis proposed by existing work.
 
-## 0. FeedBack of Developers (Confirmed: 64; Fixed: 19)
+## 0. FeedBack of Developers (Confirmed: 66; Fixed: 22)
 |NO.|App|Fork|Star|#Download on GooglePaly |#Misuse (*Fixed)|Confirmed Issue Id|
 |-|-|-|-|-|-|-|
 |01|VocableTrainer|10|27|-|1|[93](https://github.com/0xpr03/VocableTrainer-Android/issues/93)|
@@ -29,12 +36,14 @@ we implement a lightweight tool named Leopard to detect them statically, which i
 |16|monocles chat | 7 | 10 | - | 6* | [44](https://codeberg.org/Arne/monocles_chat/issues/44) |
 |17|ccgt| 4 | 11 | - | 1 | [7](https://github.com/pterodactylus42/ccgt/issues/7)  |
 |18|Notes| 121 | 769 | 10K+ | 1* | [1574](https://github.com/nextcloud/notes-android/issues/1574)  |
-|-|Total |-|-|-|64(Fixed 19)|- 
+|-|Total |-|-|-|66(Fixed 22)|- 
 
 
 
 ## 1. Tools
-### 1.1 [Leopard](./project/Leopard)
+### 1.1 [Leopard](./project/Leopard) 
+https://github.com/cuixiaoyiyi/Leopard/tree/main/project/Leopard/Readme.md
+
 ### 1.2 [eAsyncChecker](./project/Thread-eAsyncChecker)
 
 [android-platforms](./project/android-platforms)(Dependencies required for soot to resolve Android)
